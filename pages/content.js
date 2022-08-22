@@ -2,61 +2,55 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Home() {
+export default function Content() {
   function navFunc() {
     document.querySelector("html").classList.toggle("open");
   }
   return (
     <>
       <Head>
-        <title>CASUAL</title>
+        <title>ご案内 | CASUAL</title>
       </Head>
       <div className="pageGrid">
         <main>
-          <div className="hero partsGrid">
-            <h1 className="en">CASUAL</h1>
-            <p className="en">Outdoor Camping since 2001</p>
+          <div className="headimg partsGrid">
+            <div className="site en">CASUAL</div>
             <figure>
-              <img src="/img/tent.jpg" alt="" />
+              <img src="/img/tent-orange.jpg" alt="" />
             </figure>
           </div>
 
-          <div className="msg msgBlack partsGrid">
-            <figure>
-              <img src="/img/tent-green.jpg" alt="" />
-            </figure>
-            <div className="text">
-              <h2>冒険をはじめる</h2>
-              <p className="text-subtitle en">Let&#39;s Start the Adventure</p>
-              <p className="text-body">
-                冒険には準備が必要です。全部おまかせで行くもよし、道具を自分で揃えて楽しむのもよし、最小限の装備で世界各地のサイトを巡ってみるのも捨てがたい…
-                などなど、好みのスタイルで楽しめるのもポイントです。
-              </p>
-              <p className="text-link">
-                <Link href="/content">
-                  <a>詳しく見る ＞＞＞</a>
-                </Link>
-              </p>
-            </div>
-          </div>
+          <article className="post partsGrid">
+            <h1>ご案内</h1>
+            <p>
+              2001年にオンライン専門のキャンプサイトとしてオープンして依頼、CASUALは独自の情報発信を行うアウトドア系メディアおよびポータルとしてご好評をいただいております。本サイトを通してアウトドアをより身近に感じていただければ幸いです。
+            </p>
+            <p>
+              数年前にはマイナーだったキャンプも、キャンプをテーマとしたYouTubeの動画配信やコミックの人気もあり、とても身近なものになっています。
+            </p>
 
-          <div className="msg msgWhite partsGrid">
-            <figure>
-              <img src="/img/fire.jpg" alt="" />
-            </figure>
-            <div className="text">
-              <h2>カジュアルに体験する</h2>
-              <p className="text-subtitle en">Casual Outdoor Experience</p>
-              <p className="text-body">
-                近年はアウトドアを楽しむために必要なものが全部用意されたサイトやフィールドも増えています。わからないことは優しいガイドさんが教えてくれますので、アレもコレもカジュアルに体験できるのです。
-              </p>
-              <p className="text-link">
-                <Link href="/content">
-                  <a>詳しく見る ＞＞＞</a>
-                </Link>
-              </p>
+            <div className="gallery">
+              <figure className="photoA">
+                <img src="/img/camp-food.jpg" alt="" />
+              </figure>
+              <figure className="photoB">
+                <img src="/img/camp-sky.jpg" alt="" />
+              </figure>
+              <figure className="photoC">
+                <img src="/img/camp-fire.jpg" alt="" />
+              </figure>
+              <figure className="photoD">
+                <img src="/img/camp-table.jpg" alt="" />
+              </figure>
             </div>
-          </div>
+
+            <p>
+              大勢で楽しむキャンプはもちろんのこと、ひとりで楽しむソロキャンプも人気です。気軽に行けるキャンプサイトや、手軽でかさばらない道具類、簡単に設営できるテントなど、アウトドアをサポートするもろもろが進化しているのも大きいと言えるでしょう。
+            </p>
+            <p>
+              すべてを賄ってくれる「グランピング」という選択肢もあります。自分で食材を用意せず、出来合いのお惣菜やお弁当を持ち込んで自然を満喫するのも一興です。いろいろな楽しみ方、自分に合ったスタイルを見つけてみてください。
+            </p>
+          </article>
         </main>
 
         <button className="nav-button" onClick={navFunc}>
